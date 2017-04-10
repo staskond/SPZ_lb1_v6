@@ -44,10 +44,10 @@ namespace spz_lb1_v6
         private void btChangeFile_Click(object sender, EventArgs e)
         {
             string aaa = "";
-            int[] nums1 = new int[nums.Length - 1];
+            int[] nums1 = new int[nums.Length];
             for (int i = 0; i < nums.Length - 1; i++)
             {
-                if (i == 0 || i == nums.Length - 1)//fixed
+                if (i == 0 || i == nums.Length - 1)
                 {
                     nums1[i] = nums[i];
                 }
@@ -56,6 +56,7 @@ namespace spz_lb1_v6
                     nums1[i] = (nums[i - 1] + nums[i] + nums[i + 1]) / 3;
                 }
             }
+            nums1[10] = nums[10];
            for(int i = 0; i < nums1.Length; i++)
             {
                 aaa += nums1[i];
